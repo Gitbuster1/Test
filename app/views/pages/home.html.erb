@@ -1,0 +1,15 @@
+<div id="word-count">
+  <h2>First exercise</h2>
+  <span>Word count: <%= @word_count %></span>
+</div>
+<div id="jokes">
+  <h2>Second exercise</h2>
+  <% if @jokes.empty? %>
+    <p>There are no jokes about <%= @query %>.</p>
+  <% end %>
+  <% @jokes.each do |joke| %>
+    <ol>
+      <%= joke %>
+    </ol>
+  <% end %>
+</div>
